@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    
+    <h2>Tính điểm ĐH khối D</h2>
+    <table>
+        <tr>
+            <td> Môn Toán:</td>
+            <td><input type="number" name="" id="toan"></td>
+        </tr>
+        <tr>
+            <td>Môn Văn:</td>
+            <td> <input type="number" name="" id="van"></td>
+        </tr>
+        <tr>
+            <td> Môn Anh:</td>
+            <td> <input type="number" name="" id="anh"></td>
+        </tr>
+        <tr>
+            <th> Khu Vực </th>
+            <th> <select name="" id="kvv">
+                    <option value="">KV1</option>
+                    <option value="">KV2</option>
+                    <option value="">KV2-NT</option>
+                    <option value="">KV3</option>
+                </select></th>
+        </tr>
+        <tr>
+            <td><input type="submit" onclick="tinhdiem()" value="Tính điểm"></td>
+        </tr>
+    </table>
+    <p id="message"></p>
+    <script>
+        function tinhdiem() {
+            var Diemtoan = Number(document.getElementById("toan").value);
+            var Diemvan = Number(document.getElementById("van").value);
+            var Diemanh = Number(document.getElementById("anh").value);
+            var Khuvuc = document.getElementById("kvv").value;
+            var Diemcong;
+
+            if (Khuvuc = 'KV1') { Diemcong = 0.75 }
+            else if (Khuvuc = 'KV2') { Diemcong = 0.25 }
+            else if (Khuvuc = 'KV2-NT') { Diemcong = 0.5 }
+            else { Diemcong = 0 };
+            var Tong = Diemtoan + Diemvan + Diemanh + Diemcong;
+
+           document.getElementById("message").innerHTML = 'Tổng điểm đại học khối D của bạn là:' + Tong;
+        }
+    </script>
+</body>
+</html>

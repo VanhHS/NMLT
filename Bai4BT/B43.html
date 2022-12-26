@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <input type ="text" id="234" />
+        <button onclick="xemgia()">Xem gia</button>
+        <p id="dxy"></p>
+        <script>
+            console.log(document.getElementById('234').value);
+            function xemgia () {
+                var qua =document.getElementById('234').value;
+                var result
+                switch (qua) {
+                    case 'ổi': 
+                    case 'dưa hấu':
+                        result =  20000
+                        break;
+                    case 'táo':
+                    case 'xoài':
+                        result = 30000
+                        break;
+                    case 'cam':
+                    case 'chôm chôm': 
+                        result = 40000
+                        break;
+                    case'măng cụt':
+                        result = 50000
+                        break;
+                }
+                document.getElementById('dxy') .innerHTML= +result
+            }
+        </script>
+    </body>
+</html>

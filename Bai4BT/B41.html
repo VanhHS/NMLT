@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        let a =Number (prompt("Your Height: "));
+        let b =Number (prompt("Your Weight: "));
+        let c = b/(a*a)
+            if (c<16){
+                document.write("Gầy độ III")
+            }  
+            else if(16<=c && c<17){
+                document.write("Gầy độ II")
+            }
+            else if(17<=c && c<18.5){
+                document.write("Gầy độ I")
+            }
+            else if(18.5<=c && c<25){
+                document.write("Bình thường")
+            }
+            else if(25<=c && c<30){
+                document.write("Thừa cân")
+            }
+            else if(30<=c && c<35){5
+                document.write("Béo phì độ I")
+            }
+            else if(35<=c && c<40){
+                document.write("Béo phì độ II")
+            }
+            else if(c>40){
+                document.write("Béo phì độ III")
+            }
+    </script>
+</body>
+</html>
